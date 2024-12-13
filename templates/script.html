@@ -1,0 +1,16 @@
+<script>
+    // Highlight active menu item based on current URL
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll(".navmenu .nav-link");
+      const currentPath = window.location.pathname;
+  
+      navLinks.forEach(link => {
+        // Compare link's href attribute with currentPath
+        if (link.getAttribute("href") === currentPath) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+</script>
